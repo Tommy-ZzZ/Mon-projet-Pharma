@@ -1,0 +1,16 @@
+{
+  "profile": {
+    "title": "My Profile",
+    "history": "History",
+    "language": "Language",
+    "changePassword": "Change Password",
+    "aboutUs": "About Us",
+    "logout": "Logout",
+    "userId": "User ID : #"
+  },
+  "home": {
+    "welcome": "Welcome to our application",
+    "products": "Our Products",
+    "reserve": "Reserve a product"
+  }
+}

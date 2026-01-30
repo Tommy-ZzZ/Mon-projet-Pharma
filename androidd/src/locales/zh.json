@@ -1,0 +1,16 @@
+{
+  "profile": {
+    "title": "我的个人资料",
+    "history": "历史",
+    "language": "语言",
+    "changePassword": "更改密码",
+    "aboutUs": "关于我们",
+    "logout": "登出",
+    "userId": "用户ID : #"
+  },
+  "home": {
+    "welcome": "欢迎使用我们的应用",
+    "products": "我们的产品",
+    "reserve": "预定产品"
+  }
+}

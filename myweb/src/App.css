@@ -1,0 +1,1164 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 20px;
+  min-height: 100vh;
+  overflow-y: auto;
+  margin-top: 60px;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blue-card {
+  background-color: #3498db;
+}
+
+.green-card {
+  background-color: #2ecc71;
+}
+
+.yellow-card {
+  background-color: #f1c40f;
+}
+
+.red-card {
+  background-color: #e74c3c;
+}
+
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dashboard-chart-container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.online-users-container {
+  width: 35%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.online-users-list {
+  margin-top: 10px;
+}
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #e0e0e0;
+  /* Fond gris clair */
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  color: #333;
+  /* Texte gris foncé pour une meilleure lisibilité */
+}
+
+.orders-table th {
+  background-color: #b0b0b0;
+  /* En-tête de la table en gris plus foncé */
+}
+
+.dashboard-body {
+  overflow-y: auto;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.recent-orders,
+.recent-clients {
+  margin-bottom: 20px;
+}
+/*******************************************************************************************************************************/
+
+/*Clients*/
+.clients {
+  margin-top: 80px;
+  /* Pour laisser de l'espace sous la navbar */
+  padding: 20px;
+  background-color: #f9fafb;
+  /* Fond légèrement gris pour contraster */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clients input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  /* Limite la largeur de l'input */
+}
+
+.clients select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 150px;
+  /* Limite la largeur du select */
+}
+
+.clients button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  /* Couleur du bouton */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  /* Ajout d'un peu d'espace au-dessus du bouton */
+}
+
+.clients button:hover {
+  background-color: #0056b3;
+  /* Couleur du bouton au survol */
+}
+
+.clients table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.clients th,
+.clients td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.clients th {
+  background-color: #343a40;
+  /* Couleur de fond des en-têtes */
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.clients td {
+  font-size: 14px;
+  color: #333;
+}
+
+.clients tr:hover {
+  background-color: #f1f1f1;
+  /* Survol des lignes */
+}
+
+.clients .online {
+  color: green;
+  font-weight: bold;
+}
+
+.clients .offline {
+  color: red;
+  font-weight: bold;
+}
+
+.client-details {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.client-details h2 {
+  margin-bottom: 10px;
+}
+
+
+/*******************************************************************************************************************************/
+/* Styles pour l'historique des commandes et des clients inscrits */
+.dashboard-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.recent-orders,
+.recent-clients {
+  flex: 1;
+  margin-right: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recent-clients {
+  margin-right: 0;
+}
+
+.online-users-container {
+  margin-top: 20px;
+}
+
+.notification-container {
+  background-color: #ffecb3;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: left;
+}
+
+.orders-table th {
+  background-color: #f7f7f7;
+}
+
+.orders-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.recent-orders h4 {
+  color: #007bff;
+}
+
+.recent-clients h4 {
+  color: #28a745;
+}
+
+.online-users-container h4 {
+  color: #dc3545;
+}
+
+.orders-list,
+.clients-list {
+  margin-top: 10px;
+}
+
+.order-item,
+.client-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child,
+.client-item:last-child {
+  border-bottom: none;
+}
+
+/*******************************************************************************************************************************/
+/*Sidebar*/
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  padding: 10px;
+  color: white;
+  width: 240px;
+}
+
+.sidebar-list {
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.sidebar-list-item {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Icône des éléments du menu */
+.sidebar-list-icon {
+  color: #3f51b5;
+  margin-right: 16px;
+
+}
+
+.sidebar-list-text {
+  color: #333;
+  font-size: 16px;
+}
+
+.sidebar-logo {
+  height: 30px;
+  width: auto;
+ 
+}
+
+.sidebar-header .MuiIconButton-root {
+  color: white;
+}
+.sidebar-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+
+.MuiDrawer-paper {
+  width: 240px;
+  overflow: hidden;
+}
+
+.sidebar-list-item.active {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.sidebar-list-item.active .sidebar-list-icon {
+  color: white;
+}
+
+.sidebar-list-item.active .sidebar-list-text {
+  color: white;
+}
+
+
+/*******************************************************************************************************************************/
+/*Registration*/
+.registration-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../public/webpharma3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  color: white;
+  text-align: left;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+/*******************************************************************************************************************************/
+/* historique de commande*/
+
+/* Conteneur principal */
+.order-history-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Titre de la table */
+.table-title {
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Icône de recherche */
+.search-icon {
+  font-size: 24px;
+  cursor: pointer;
+  text-align: right;
+}
+
+/* Barre de recherche */
+.search-input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+/* Statut de la commande */
+.status-delivered {
+  color: green;
+  font-weight: bold;
+}
+
+.status-canceled {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-rejected {
+  color: red;
+  font-weight: bold;
+}
+
+/*******************************************************************************************************************************/
+/*login*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  /* Empêche le défilement */
+}
+
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../public/webpharma3.jpg');
+  /* Assurez-vous que le chemin est correct */
+  background-size: cover;
+  /* Couvre toute la page */
+  background-position: center;
+  /* Centre l'image */
+  background-repeat: no-repeat;
+  /* Évite la répétition de l'image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  color: white;
+  text-align: left;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  /* Couleur pour le message d'erreur */
+  margin-top: 10px;
+  text-align: center;
+  /* Centrer le message d'erreur */
+}
+
+.register-link {
+  color: #007bff;
+  /* Couleur du texte */
+  cursor: pointer;
+  /* Changer le curseur en pointeur */
+  text-align: center;
+  /* Centrer le texte */
+  margin-top: 10px;
+  /* Espace au-dessus du texte */
+  font-size: 0.8rem;
+  /* Taille de la police */
+}
+
+.register-link:hover {
+  text-decoration: underline;
+  /* Souligner au survol */
+}
+
+/*Mot de passe oublié*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Ensure modal is on top */
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  width: 300px;
+  text-align: center;
+}
+
+.forgot-password {
+  color: #007bff;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  /* Adjust the font size here */
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Lien vers Admin login */
+
+
+.admin-link {
+  color: #f8f9fa;
+  /* Couleur du texte (blanc clair) */
+  cursor: pointer;
+  /* Changer le curseur en pointeur */
+  text-align: center;
+  /* Centrer le texte */
+  margin-top: 15px;
+  /* Espace au-dessus du texte */
+  font-size: 0.9rem;
+  /* Taille de la police réduite */
+  font-weight: bold;
+  /* Mettre le texte en gras */
+}
+
+.admin-link:hover {
+  text-decoration: underline;
+  /* Souligner au survol */
+  color: #ff0000;
+  /* Changer la couleur du texte au survol (rouge) */
+}
+
+/* Optionnel : Animation de survol pour effet de transition */
+.admin-link {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+
+/* Spinner de chargement */
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  /* Couleur du fond du spinner */
+  border-top: 4px solid #007bff;
+  /* Couleur de la barre tournante */
+  border-radius: 50%;
+  /* Forme circulaire */
+  width: 30px;
+  /* Taille du spinner */
+  height: 30px;
+  /* Taille du spinner */
+  animation: spin 1s linear infinite;
+  /* Animation de rotation infinie */
+}
+
+/* Animation de rotation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*******************************************************************************************************************************/
+/*admin login*/
+
+/* Styles du bouton de retour */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+/* Styles du conteneur de la page admin */
+.admin-login-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  background-image: url('../public/webpharma2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: rgb(6, 6, 6);
+}
+
+/* Styles du conteneur de la page admin */
+.admin-login-container {
+  width: 350px;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Ajoute une opacité pour lisibilité */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.admin-login-form .logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.admin-login-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.admin-login-form label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.admin-login-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #060606;
+  border-radius: 5px;
+}
+
+.admin-login-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admin-login-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Message d'erreur */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/*******************************************************************************************************************************/
+/*admin section*/
+
+.admin-container {
+  width: 80%;
+  max-width: 900px;
+  margin: 60px auto 20px;
+  /* Ajout de margin-top pour ne pas être caché sous la navbar */
+  padding: 20px;
+  background-color: #1a1a1a;
+  /* Fond sombre */
+  color: #f1f1f1;
+  /* Texte clair */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style du titre principal */
+.admin-container h1 {
+  text-align: center;
+  color: #f1f1f1;
+  /* Titre clair */
+}
+
+/* Style du bouton "Ajouter un nouvel admin" */
+.add-admin-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  /* Bleu pour le bouton */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-admin-btn svg {
+  margin-right: 10px;
+}
+
+.add-admin-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style du formulaire */
+.form-container {
+  margin-bottom: 30px;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ddd;
+  /* Légèrement plus clair que le fond sombre */
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #444;
+  /* Bordure plus claire */
+  border-radius: 4px;
+  font-size: 14px;
+  color: #f1f1f1;
+  /* Texte dans les champs d'entrée */
+  background-color: #333;
+  /* Fond sombre des champs */
+  box-sizing: border-box;
+}
+
+/* Style du bouton de soumission */
+.submit-btn {
+  padding: 10px 15px;
+  background-color: #28a745;
+  /* Vert pour le bouton de soumission */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+/* Style du tableau des administrateurs */
+.admins-table {
+  margin-top: 20px;
+}
+
+.admins-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admins-table th,
+.admins-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #444;
+  /* Bordure claire pour le mode sombre */
+}
+
+.admins-table th {
+  background-color: #333;
+  /* Fond sombre pour les en-têtes */
+  color: #f1f1f1;
+  /* Texte clair dans les en-têtes */
+}
+
+.admins-table tr:nth-child(even) {
+  background-color: #222;
+  /* Fond plus foncé pour les lignes paires */
+}
+
+.admins-table tr:nth-child(odd) {
+  background-color: #2b2b2b;
+  /* Fond sombre pour les lignes impaires */
+}
+
+.admins-table td {
+  color: #ddd;
+  /* Texte des cellules clair */
+}
+
+/*******************************************************************************************************************************/
+
+/* Style spécifique pour la table des commandes (Orders) */
+
+.orders-container {
+  margin-top: 80px;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.orders-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.orders-container th,
+.orders-container td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.orders-container th {
+  background-color: #343a40;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.orders-container td {
+  font-size: 14px;
+  color: #333;
+}
+
+.orders-container tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Styles pour les statuts de commande */
+.orders-container .status {
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.orders-container .status.new {
+  background-color: #ffc107;
+  color: white;
+}
+
+.orders-container .status.delivered {
+  background-color: #28a745;
+  color: white;
+}
+
+.orders-container .status.pending {
+  background-color: #6c757d;
+  color: white;
+}
+
+.orders-container .status.shipping {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Styles pour les boutons d'action */
+.orders-container button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.orders-container .btn-accept {
+  background-color: #28a745;
+  color: white;
+}
+
+.orders-container .btn-accept:hover {
+  background-color: #218838;
+}
+
+.orders-container .btn-reject {
+  background-color: #dc3545;
+  color: white;
+}
+
+.orders-container .btn-reject:hover {
+  background-color: #c82333;
+}
+
+.orders-container .btn-delete {
+  background-color: #ffc107;
+  color: white;
+}
+
+.orders-container .btn-delete:hover {
+  background-color: #e0a800;
+}
+
+/* Styles pour l'overlay des détails de la commande */
+.order-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* Fond semi-transparent */
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  /* Applique un flou sur l'arrière-plan */
+  cursor: pointer;
+  /* L'overlay réagit au clic pour fermer */
+}
+
+/* Styles pour la fenêtre des détails */
+.order-details {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 80%;
+}
+
+/* Styles pour le texte et les éléments dans la fenêtre */
+.order-details h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.order-details p {
+  font-size: 14px;
+  color: #555;
+}
+
+.order-details ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.order-details li {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Styles pour la zone de message */
+.order-details textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  resize: none;
+}
+
+.order-details button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #16f90a;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-details button:hover {
+  background-color: #5d5d5d;
+}
+
+
+/* Styles spécifiques pour l'overlay (zone floue de fermeture) */
+.order-details-overlay {
+  cursor: pointer;
+}
+
+.order-details-overlay .order-details {
+  cursor: auto;
+  /* Ne pas permettre de fermer l'overlay en cliquant sur le contenu */
+}

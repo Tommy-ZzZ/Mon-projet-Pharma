@@ -1,0 +1,16 @@
+{
+  "profile": {
+    "title": "Mon Profil",
+    "history": "Historique",
+    "language": "Langue",
+    "changePassword": "Changer le mot de passe",
+    "aboutUs": "À propos de nous",
+    "logout": "Déconnexion",
+    "userId": "ID Utilisateur : #"
+  },
+  "home": {
+    "welcome": "Bienvenue à notre application",
+    "products": "Nos Produits",
+    "reserve": "Réserver un produit"
+  }
+}
