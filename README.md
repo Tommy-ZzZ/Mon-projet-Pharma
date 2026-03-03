@@ -28,4 +28,4 @@ Application multiplateforme : **Web (React)** et **Mobile (React Native / Expo)*
 
 ---
 
-## 📁 Structure du projet
+
